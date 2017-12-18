@@ -1,0 +1,14 @@
+app:
+  image: toancong/feup:node6
+  volumes:
+    - ./:/data/www/current
+  environment:
+    AWS_SHARED_CREDENTIALS_FILE: /data/www/current/credentials
+  ports:
+    - 20030:3000
+  command:
+    - /bin/bash
+    - -c
+    - |
+      npm run build
+      npm run start:serverless

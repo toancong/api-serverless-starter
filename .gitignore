@@ -1,0 +1,6 @@
+.DS_Store
+.serverless
+dist
+credentials
+node_modules
+node-dependencies**
